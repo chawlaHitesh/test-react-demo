@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 18
       - name: Install deps
-        uses: npm Install
+        uses: npm install
 
       - name: build react js project
         uses: npm run build
