@@ -13,12 +13,12 @@ jobs:
         with:
           node-version: 18
       - name: Install deps
-        uses: npm install
+        run: npm install
 
       - name: build react js project
-        uses: npm run build
+        run: npm run build
 
-      - uses: jakejarvis/s3-sync-action@main
+      - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
